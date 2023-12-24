@@ -6,8 +6,8 @@ export const GET_USER = "GET_USER";
 export const getUsers = () => {
   return async function (dispatch) {
     const apiData = await axios.get(
-      "https://jsonplaceholder.typicode.com/users"
-      // " http://localhost:3001/users/"
+      // "https://jsonplaceholder.typicode.com/users"
+      "http://localhost:3001/users/"
     );
     const users = apiData.data;
     dispatch({ type: GET_USERS, payload: users });
