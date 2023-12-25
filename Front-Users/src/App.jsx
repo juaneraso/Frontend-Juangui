@@ -14,7 +14,7 @@ function App() {
     <Routes>
       
      <Route path="/" element={<Landing/>}/>           
-     <Route path="https://frontend-juangui.vercel.app/home" element={<Home/>}/>    
+     <Route path="/home" element={<Home/>}/>    
      <Route path="/create" element={<Form/>}/>    
      <Route path="/detail" element={<Detail/>}/>    
  
