@@ -1,5 +1,5 @@
 
-import { Landing, Detail, Form} from "./views";
+import { Home, Landing, Detail, Form} from "./views";
 import {  Route, Routes, useLocation } from "react-router-dom";
 import NavBar from "./components/Navbar/Navbar";
 
@@ -14,7 +14,7 @@ function App() {
     <Routes>
       
      <Route path="/" element={<Landing/>}/>           
-     {/* <Route path="/home" element={<Home/>}/>     */}
+     <Route path="https://frontend-juangui.vercel.app/home" element={<Home/>}/>    
      <Route path="/create" element={<Form/>}/>    
      <Route path="/detail" element={<Detail/>}/>    
  
