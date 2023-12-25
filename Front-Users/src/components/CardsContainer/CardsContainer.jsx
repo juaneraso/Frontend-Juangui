@@ -14,6 +14,7 @@ const CardsContainer = () =>{
        {users.map((user)=>{
 
         return <Card 
+        key={user.id}
         id ={user.id}
         name ={user.name}
         phone = {user.phone}

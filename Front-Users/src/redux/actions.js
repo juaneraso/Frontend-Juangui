@@ -7,7 +7,8 @@ export const getUsers = () => {
   return async function (dispatch) {
     const apiData = await axios.get(
       // "https://jsonplaceholder.typicode.com/users"
-      "http://localhost:3001/users/"
+      // "http://localhost:3001/users/"
+      "https://render-backend-bqi5.onrender.com/users"
     );
     const users = apiData.data;
     dispatch({ type: GET_USERS, payload: users });
