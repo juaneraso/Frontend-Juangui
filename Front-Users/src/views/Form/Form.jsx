@@ -46,7 +46,7 @@ const Form = () =>{
      event.preventDefault();
      console.log("Form",form);    
 
-     const response =   axios.post(" http://localhost:3001/users",form)
+     const response =   axios.post("https://render-backend-bqi5.onrender.com/users",form)
      .then(res=>alert(res))
      .catch(err=>alert(err));
 
