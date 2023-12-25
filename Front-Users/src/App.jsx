@@ -4,13 +4,14 @@ import {  Route, Routes, useLocation } from "react-router-dom";
 import NavBar from "./components/Navbar/Navbar";
 
 function App() {
- const location = useLocation();
+//  const location = useLocation();
  
 
   return (
     <>
-    {location.pathname !== "/" && <NavBar/>}
+    {/* {location.pathname !== "/" && <NavBar/>} */}
     
+    <NavBar/>
     <Routes>
       
      <Route path="/" element={<Landing/>}/>           
