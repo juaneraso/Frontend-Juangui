@@ -42,15 +42,49 @@ const Form = () =>{
 
     };
   
-     const submitHandler = (event) =>{
-     event.preventDefault();
-     console.log("Form",form);    
+    //  const submitHandler = (event) =>{
+    //  event.preventDefault();
+    //  console.log("Form",form);    
 
-     const response =   axios.post("https://render-backend-bqi5.onrender.com/users",form)
-     .then(res=>alert(res))
-     .catch(err=>alert(err));
+    // //  const response =   axios.post("https://render-backend-bqi5.onrender.com/users",form)
 
-     }
+    //  const response =   axios.post("http://localhost:3001/",form)
+    //  .then(res=>alert(res))
+    //  .catch(err=>alert(err));
+
+    //  }
+
+     
+     const submitHandler =  async (event) =>{
+      event.preventDefault();
+      console.log("Form",form);    
+ 
+     //  const response =   axios.post("https://render-backend-bqi5.onrender.com/users",form)
+       try {
+         const response = await fetch("http://localhost:3001/users",{
+          method : "POST",
+          headers: {
+             'Content-Type': 'application/json',
+          }, 
+           body : JSON.stringify(form),       
+
+         });
+         if (!response.ok) {
+          throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+
+         const data = await response.json();
+         console.log('Fetch POST Response:', data);
+         
+       } catch (error) {
+        console.error('Fetch POST Error:', error.message);
+       }
+
+      //  alert("Creado con exito");
+
+      } ;
+    
+
  return(<>
    <form onSubmit={submitHandler}>
 
