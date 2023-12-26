@@ -3,7 +3,9 @@ import axios from "axios";
 export const GET_USERS = "GET_USERS";
 export const GET_USER = "GET_USER";
 
-// const back = import.meta.env.VITE_APP_BACK;
+// Variable de entorno
+
+const back = import.meta.env.VITE_APP_BACK;
 
 // export const getUsers = () => {
 //   return async function (dispatch) {
