@@ -24,9 +24,7 @@ export const GET_USER = "GET_USER";
 export const getUsers = () => {
   return async function (dispatch) {
     try {
-      const apiData = await fetch(
-        "https://render-backend-bqi5.onrender.com/users"
-      );
+      const apiData = await fetch(`${back}/users`);
       if (!apiData.ok) {
         throw new Error(`HTTP error! Status: ${apiData.status}`);
       }
