@@ -3,6 +3,8 @@ import axios from "axios";
 export const GET_USERS = "GET_USERS";
 export const GET_USER = "GET_USER";
 
+const back = import.meta.env.VITE_APP_BACK;
+
 // export const getUsers = () => {
 //   return async function (dispatch) {
 //     try {
@@ -22,7 +24,7 @@ export const GET_USER = "GET_USER";
 export const getUsers = () => {
   return async function (dispatch) {
     try {
-      const apiData = await fetch("http://localhost:3001/users");
+      const apiData = await fetch(`${back}/users`);
       if (!apiData.ok) {
         throw new Error(`HTTP error! Status: ${apiData.status}`);
       }
