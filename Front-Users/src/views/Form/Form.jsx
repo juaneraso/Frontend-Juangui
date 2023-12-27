@@ -2,6 +2,7 @@ import axios from "axios";
 import { useState } from "react";
 
 const Form = () =>{
+  const back = import.meta.env.VITE_APP_BACK;
 
   const [form,setForm]= useState({
      email:"",
@@ -61,7 +62,7 @@ const Form = () =>{
  
      //  const response =   axios.post("https://render-backend-bqi5.onrender.com/users",form)
        try {
-         const response = await fetch("http://localhost:3001/users",{
+         const response = await fetch(`${back}/users`,{
           method : "POST",
           headers: {
              'Content-Type': 'application/json',
