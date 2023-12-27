@@ -26,7 +26,7 @@ const back = import.meta.env.VITE_APP_BACK;
 export const getUsers = () => {
   return async function (dispatch) {
     try {
-      const apiData = await fetch(`${back}/users`);
+      const apiData = await fetch(`${back}users`);
       if (!apiData.ok) {
         throw new Error(`HTTP error! Status: ${apiData.status}`);
       }
