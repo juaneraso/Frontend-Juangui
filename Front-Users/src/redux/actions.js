@@ -6,7 +6,6 @@ export const GET_USER = "GET_USER";
 // Variable de entorno
 
 const back = import.meta.env.VITE_APP_BACK;
-console.log("Hola estoy aqui");
 
 // export const getUsers = () => {
 //   return async function (dispatch) {
