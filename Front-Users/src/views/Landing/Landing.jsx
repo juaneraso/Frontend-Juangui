@@ -1,9 +1,12 @@
+ import style from "../Landing/Landing.module.css"
+
 
 const Landing = () =>{
 
     return( 
-      <div>
-       <h1>Estoy en Landing</h1>
+      <div className={style.container}>
+       <h1>CRUD USERS</h1>
+       <button>Ingresar</button>
       </div>
     ) 
   
