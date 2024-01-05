@@ -6,8 +6,6 @@ import { useSelector } from "react-redux";
 const CardsContainer = () =>{
     const users  = useSelector(state=>state.users);
    
-    
-
 
     return (
      <div className={style.container}>
