@@ -26,7 +26,7 @@ const NavBarDos = () => {
           <Navbar.Brand>CRUD</Navbar.Brand>
           <Nav className="me-auto">
             <Nav.Link href="/home">Home</Nav.Link>
-            <Nav.Link href="/create">Form</Nav.Link>
+            <Nav.Link href="/create">Create</Nav.Link>
           </Nav>
         </Container>
       </Navbar>
