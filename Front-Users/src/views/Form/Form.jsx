@@ -181,6 +181,8 @@ const FormDos = () => {
     //  alert("Creado con exito");
   };
 
+  const formIsDisabled = !form.name || !form.email || !form.phone;
+
   return (
     <div className="bg-dark text-center mt-4 ">
       <h1 className="text-light  mt-2">Create your own user</h1>
@@ -226,6 +228,7 @@ const FormDos = () => {
         <Button
           className="bg-success text-light mb-5"
           variant="primary"
+          disabled={formIsDisabled}
           type="submit"
         >
           Submit

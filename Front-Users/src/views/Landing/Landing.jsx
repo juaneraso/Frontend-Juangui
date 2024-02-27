@@ -24,7 +24,7 @@ const Landing = () => {
           }}
         >
           <Link to="/home">
-            <Button variant="secondary" size="lg">
+            <Button className="btn btn-success" variant="secondary" size="lg">
               INGRESAR
             </Button>
           </Link>
