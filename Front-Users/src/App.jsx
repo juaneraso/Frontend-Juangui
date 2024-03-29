@@ -11,7 +11,7 @@ import FormDos from "./views/Form/Form";
 
 function App() {
   const location = useLocation();
-  console.log("HOlaaa");
+
 
   return (
     <>
