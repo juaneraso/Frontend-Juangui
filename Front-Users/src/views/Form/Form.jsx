@@ -174,10 +174,12 @@ const FormDos = () => {
 
       const data = await response.json();
       console.log("Fetch POST Response:", data);
+      alert("Usuario creado");
     } catch (error) {
+      alert("Error al crear usuario: " + error.message);
       console.error("Fetch POST Error:", error.message);
     }
-
+     
     //  alert("Creado con exito");
   };
 
